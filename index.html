@@ -1,95 +1,19 @@
 <!DOCTYPE html>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #121212;
-    color: #ffffff;
-  }
-
-  header {
-    text-align: center;
-    padding: 50px;
-    background-color: #000000;
-  }
-
-  header h1 {
-    font-size: 3em;
-    color: #ffd700;
-  }
-
-  header p {
-    font-size: 1.5em;
-    color: #ffffff;
-  }
-
-  nav {
-    background-color: #1c1c1c;
-    padding: 10px 0;
-    text-align: center;
-  }
-
-  nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  nav ul li {
-    display: inline;
-    margin: 0 15px;
-  }
-
-  nav ul li a {
-    color: #ffd700;
-    text-decoration: none;
-    font-size: 1.2em;
-  }
-
-  nav ul li a:hover {
-    text-decoration: underline;
-  }
-
-  section {
-    padding: 50px;
-    margin: 20px;
-  }
-
-  section h2 {
-    color: #ffd700;
-    font-size: 2em;
-    border-bottom: 2px solid #ffd700;
-    padding-bottom: 10px;
-  }
-
-  section h3 {
-    color: #ffffff;
-    font-size: 1.5em;
-  }
-
-  section p {
-    font-size: 1.2em;
-    line-height: 1.6em;
-  }
-
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #000000;
-    color: #ffffff;
-  }
-
-  footer p {
-    margin: 0;
-  }
-</style>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mostafa Aly - Portfolio</title>
+    <!-- Link to CSS -->
     <link rel="stylesheet" href="styles.css" />
+    <!-- Link to AOS library for animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <!-- jQuery and Isotope library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
   </head>
   <body>
     <header>
@@ -107,7 +31,7 @@
       </ul>
     </nav>
 
-    <section id="about">
+    <section id="about" data-aos="fade-up">
       <h2>About Me</h2>
       <p>
         I am a computer engineer specializing in Cyber Security and Generative
@@ -117,7 +41,7 @@
       </p>
     </section>
 
-    <section id="skills">
+    <section id="skills" data-aos="fade-up">
       <h2>Skills and Expertise</h2>
       <ul>
         <li>
@@ -142,7 +66,7 @@
       </ul>
     </section>
 
-    <section id="experience">
+    <section id="experience" data-aos="fade-up">
       <h2>Professional Experience and Internships</h2>
       <h3>
         Intern | Etisalat Egypt by E&, Enterprise Security Department (2 months)
@@ -162,74 +86,83 @@
       </p>
     </section>
 
-    <section id="projects">
+    <section id="projects" data-aos="fade-up">
       <h2>Projects and Achievements</h2>
-      <h3>
-        Graduation Project: Reconstructing 3D Facial Models from Textual
-        Descriptions
-      </h3>
-      <p>
-        Awarded an A+ Grade and the 2023/2024 Computer Scientific Society prize
-        for the best Capstone project. Worked on the Facial Shape Reconstruction
-        Module, retraining the pre-trained Deep3D model, achieving high accuracy
-        in 3D facial reconstructions. Integrated SQLAlchemy with PostgreSQL for
-        database management and ensured the security of data in transit and at
-        rest using backend frameworks like Flask.
-      </p>
-
-      <h3>Network Classroom</h3>
-      <p>
-        Implemented an application where one computer acts as a teacher to
-        multiple student computers. The teacher computer can display its screen
-        to students, view student screens, and share files using socket
-        programming, the Tkinter framework, and the FTP protocol.
-      </p>
-
-      <h3>Smart Dustbin</h3>
-      <p>
-        Developed a system that detects human gestures to automatically open the
-        bin, measures the level of garbage, and notifies users when it is nearly
-        full. The system monitors multiple dustbins and allows remote commands
-        using ESP8266, ultrasonic sensors, a servo motor, and MQTT protocol with
-        a web HTML GUI for efficient waste management.
-      </p>
-
-      <h3>Web Application Firewall (WAF) Implementation</h3>
-      <p>
-        Secured Nginx with ModSecurity on an Ubuntu VM to prevent web
-        application attacks such as SQL injection and cross-site scripting
-        (XSS). Configured OWASP Core Rule Set (CRS) for ModSecurity and tested
-        the firewall's effectiveness in blocking malicious traffic.
-      </p>
+      <div class="portfolio-filters">
+        <button data-filter="*">Show All</button>
+        <button data-filter=".ai">AI Projects</button>
+        <button data-filter=".security">Security Projects</button>
+        <button data-filter=".iot">IoT Projects</button>
+      </div>
+      <div class="portfolio-items">
+        <div class="portfolio-item ai" onclick="openModal('modal1')">
+          <h3>Reconstructing 3D Facial Models</h3>
+          <p>
+            Awarded an A+ Grade and the 2023/2024 Computer Scientific Society
+            prize...
+          </p>
+        </div>
+        <div class="portfolio-item security" onclick="openModal('modal2')">
+          <h3>Web Application Firewall (WAF)</h3>
+          <p>Secured Nginx with ModSecurity on an Ubuntu VM...</p>
+        </div>
+        <div class="portfolio-item iot" onclick="openModal('modal3')">
+          <h3>Smart Dustbin</h3>
+          <p>
+            Developed a system that detects human gestures to automatically open
+            the bin...
+          </p>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" data-aos="fade-up">
       <h2>Contact Information</h2>
-      <p>
-        Email: <a href="mailto:Mostafa3lly@gmail.com">Mostafa3lly@gmail.com</a>
-      </p>
-      <p>
-        LinkedIn:
-        <a
-          href="https://www.linkedin.com/in/mostafa-aly-1700601b7"
-          target="_blank"
-          >Mostafa Aly</a
-        >
-      </p>
-      <p>
-        GitHub:
-        <a href="https://github.com/MoStaFa3lly" target="_blank">MoStaFa3lly</a>
-      </p>
-      <p>
-        TryHackMe:
-        <a href="https://tryhackme.com/p/MoStafaAly" target="_blank"
-          >MoStafaAly</a
-        >
-      </p>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
     </section>
 
     <footer>
       <p>&copy; 2024 Mostafa Aly. All rights reserved.</p>
     </footer>
+
+    <!-- Modal 1 -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h3>Reconstructing 3D Facial Models</h3>
+        <p>Detailed description, screenshots, and other media.</p>
+        <button class="close-modal" onclick="closeModal('modal1')">
+          Close
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <h3>Web Application Firewall (WAF)</h3>
+        <p>Detailed description, screenshots, and other media.</p>
+        <button class="close-modal" onclick="closeModal('modal2')">
+          Close
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <h3>Smart Dustbin</h3>
+        <p>Detailed description, screenshots, and other media.</p>
+        <button class="close-modal" onclick="closeModal('modal3')">
+          Close
+        </button>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
   </body>
 </html>
