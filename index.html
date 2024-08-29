@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mostafa Aly - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="libs/aos/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Mostafa Aly</h1>
+      <p>Computer Engineer | Cyber Security & Generative AI Specialist</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="about" data-aos="fade-up">
+      <h2>About Me</h2>
+      <p>
+        I am a computer engineer specializing in Cyber Security and Generative
+        AI. With hands-on experience in AI model development, security
+        practices, and software development, I bring innovative solutions to
+        complex problems.
+      </p>
+    </section>
+
+    <section id="skills" data-aos="fade-up">
+      <h2>Technical Skills</h2>
+      <div class="skill">
+        <i class="fas fa-network-wired"></i>
+        <h3>Networking</h3>
+        <p>
+          Expertise in TCP/IP, VLANs, routing, switching, and firewall
+          management. Hands-on experience with Cisco ISE, Fortigate, Palo Alto
+          firewalls, QRadar SIEM, and VPNs (IPSec, SSL).
+        </p>
+      </div>
+      <hr />
+      <div class="skill">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Security</h3>
+        <p>
+          In-depth knowledge of network security principles, penetration
+          testing, incident response, and vulnerability assessment. Proficient
+          in DFIR, Threat Intelligence, Malware Analysis, SIEM systems,
+          Kaspersky Endpoint Security, DLP, SSL, IDS & IPS, and WAF.
+        </p>
+      </div>
+      <hr />
+      <div class="skill">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Operating Systems</h3>
+        <p>
+          Advanced skills in Linux and Windows Server environments, including
+          command line operations.
+        </p>
+      </div>
+      <hr />
+      <div class="skill">
+        <i class="fas fa-robot"></i>
+        <h3>Generative AI & Machine Learning</h3>
+        <p>
+          Proficient in developing AI models, Machine Learning, and Deep
+          Learning solutions. Experienced with MLOps tools (MLflow, Hugging
+          Face), GANs, NLP with Attention Models, and Prompt Engineering.
+        </p>
+      </div>
+      <hr />
+      <div class="skill">
+        <i class="fas fa-code"></i>
+        <h3>Programming Languages</h3>
+        <p>
+          Proficient in C, C++, C#, Java, Python, with strong problem-solving
+          abilities in these languages.
+        </p>
+      </div>
+      <hr />
+      <div class="skill">
+        <i class="fas fa-globe"></i>
+        <h3>Web Development</h3>
+        <p>
+          Skilled in HTML5, CSS, JavaScript, Ajax, PHP, SQL, and Node.js, with
+          experience in building full-stack web applications.
+        </p>
+      </div>
+      <hr />
+      <div class="skill">
+        <i class="fas fa-gamepad"></i>
+        <h3>Game Development</h3>
+        <p>
+          Experience in Unity, Blender, and Autodesk 3ds Max for creating 3D
+          models and developing interactive games.
+        </p>
+      </div>
+      <hr />
+      <div class="skill">
+        <i class="fas fa-paint-brush"></i>
+        <h3>Graphic Design</h3>
+        <p>
+          Proficient in Adobe Creative Suite (Premiere, Photoshop, Illustrator,
+          After Effects, Audition) for video editing, graphic design, and audio
+          production.
+        </p>
+      </div>
+    </section>
+
+    <section id="experience" data-aos="fade-up">
+      <h2>Professional Experience and Internships</h2>
+      <h3>
+        Intern | Etisalat Egypt by E&, Enterprise Security Department (2 months)
+      </h3>
+      <p>
+        Gained hands-on experience with security incident analysis, penetration
+        testing, and maintaining security infrastructure. Worked with tools like
+        Kaspersky Endpoint Security, FortiGate firewall, and Cisco ISE NAC
+        Solution.
+      </p>
+
+      <h3>Intern | Digital Egypt Pioneers Initiative (DEPI) (6 months)</h3>
+      <p>
+        Focused on Generative AI and gained skills in AI models, MLOps tools,
+        GANs, and Prompt Engineering. Collaborated with local and international
+        technology companies for skill development.
+      </p>
+    </section>
+
+    <section id="projects" data-aos="fade-up">
+      <h2>Projects and Achievements</h2>
+      <div class="portfolio-filters">
+        <button data-filter="*">Show All</button>
+        <button data-filter=".ai">AI Projects</button>
+        <button data-filter=".security">Security Projects</button>
+        <button data-filter=".iot">IoT Projects</button>
+        <button data-filter=".networks">Advanced Networks</button>
+      </div>
+      <div class="portfolio-items">
+        <div class="portfolio-item ai" onclick="openModal('modal1')">
+          <h3>Reconstructing 3D Facial Models</h3>
+          <p>
+            Awarded an A+ Grade and the 2023/2024 Computer Scientific Society
+            prize...
+          </p>
+        </div>
+        <div class="portfolio-item security" onclick="openModal('modal2')">
+          <h3>Web Application Firewall (WAF)</h3>
+          <p>Secured Nginx with ModSecurity on an Ubuntu VM...</p>
+        </div>
+        <div class="portfolio-item iot" onclick="openModal('modal3')">
+          <h3>Smart Dustbin</h3>
+          <p>
+            Developed a system that detects human gestures to automatically open
+            the bin...
+          </p>
+        </div>
+        <div class="portfolio-item networks" onclick="openModal('modal4')">
+          <h3>Network Classroom</h3>
+          <p>
+            Implemented an application where one computer acts as a teacher to
+            multiple student computers...
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+      <h2>Contact Information</h2>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:Mostafa3lly@gmail.com">Mostafa3lly@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-linkedin"></i>
+          <a
+            href="https://www.linkedin.com/in/mostafa-aly-1700601b7"
+            target="_blank"
+            >LinkedIn Profile</a
+          >
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/MoStaFa3lly" target="_blank"
+            >GitHub Profile</a
+          >
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-tryhackme"></i>
+          <a href="https://tryhackme.com/p/MoStafaAly" target="_blank"
+            >TryHackMe Profile</a
+          >
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-hackerrank"></i>
+          <a href="https://www.hackerrank.com/MoStafaAly" target="_blank"
+            >Hacker Rank Profile</a
+          >
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-code"></i>
+          <a href="https://codeforces.com/profile/mostafa_aly" target="_blank"
+            >Codeforces Profile</a
+          >
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-stack-overflow"></i>
+          <a
+            href="https://stackexchange.com/users/25422470/mostafa-aly"
+            target="_blank"
+            >Stack Overflow Profile</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Mostafa Aly. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal 1 -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h3>Reconstructing 3D Facial Models</h3>
+        <p>
+          Awarded an A+ Grade and the 2023/2024 Computer Scientific Society
+          prize for the best Capstone project. Worked on the Facial Shape
+          Reconstruction Module, retraining the pre-trained Deep3D model,
+          achieving high accuracy in 3D facial reconstructions. Integrated
+          SQLAlchemy with PostgreSQL for database management and ensured the
+          security of data in transit and at rest using backend frameworks like
+          Flask.
+        </p>
+        <button class="close-modal" onclick="closeModal('modal1')">
+          Close
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <h3>Web Application Firewall (WAF)</h3>
+        <p>
+          Secured Nginx with ModSecurity on an Ubuntu VM to prevent web
+          application attacks such as SQL injection and cross-site scripting
+          (XSS). Configured OWASP Core Rule Set (CRS) for ModSecurity and tested
+          the firewall's effectiveness in blocking malicious traffic.
+        </p>
+        <button class="close-modal" onclick="closeModal('modal2')">
+          Close
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <h3>Smart Dustbin</h3>
+        <p>
+          Developed a system that detects human gestures to automatically open
+          the bin, measures the level of garbage, and notifies users when it is
+          about to fill up. The system also monitors multiple dustbins and
+          allows remote commands to open or close the lid. Utilized ESP8266,
+          ultrasonic sensors, a servo motor, MQTT protocol, and a web HTML GUI
+          for efficient waste management.
+        </p>
+        <button class="close-modal" onclick="closeModal('modal3')">
+          Close
+        </button>
+      </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+        <h3>Network Classroom</h3>
+        <p>
+          Implemented an application where one computer acts as a teacher to
+          multiple student computers. The teacher computer can display its
+          screen to students, view the screens of student computers, and share
+          files with them. Utilized socket programming, Tkinter framework, and
+          FTP protocol to achieve seamless interaction and file sharing.
+        </p>
+        <button class="close-modal" onclick="closeModal('modal4')">
+          Close
+        </button>
+      </div>
+    </div>
+
+    <script src="libs/jquery/jquery.min.js"></script>
+    <script src="libs/isotope/isotope.pkgd.min.js"></script>
+    <script src="libs/aos/aos.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
